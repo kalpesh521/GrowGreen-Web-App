@@ -1,0 +1,9 @@
+# render.yaml
+
+services:
+  - name: GrowGreen-Web-Application
+    env: 
+      - key: POSTGRES_URL
+        value: postgres://suraj:b88jwwC8aulZmvgoRHdf9RWB8YvJkpcf@dpg-chlgi9m4dadfmsmdcbo0-a.oregon-postgres.render.com/suraj_n
+    buildCommand: pip install -r requirements.txt  # Command to install Python dependencies
+    startCommand: python manage.py runserver 0.0.0.0:$PORT  # Command to start the Django app
