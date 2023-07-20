@@ -87,12 +87,10 @@ DATABASES = {
 import dj_database_url
 import os 
 
-# DATABASES = {
-#     'default': dj_database_url.config(default=os.environ.get('POSTGRES_URL'))
-# }
-
-
-
+DATABASES = {
+    # 'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
+    'default': dj_database_url.config(default='postgres://growgreendb_rhzd_user:uWAJPFzFmcYsQGM8nxide5bjIefl37Sn@dpg-cis1q8liuie5ebfju11g-a.oregon-postgres.render.com/growgreendb_rhzd')
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
